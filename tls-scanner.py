@@ -17,7 +17,7 @@ def analyze (hostname):
     # re-submit to get the IP address
     print "  Re-submit"
     req = requests.get (target + "host={}&".format (hostname) + "clearCache=on&publish=off")
-    ip = json.loads (req.text)[u'endpoints'][0][u'ipAddress']
+    ip = json.loads (req.text)[u'endpoints'][-1][u'ipAddress']
     print "    IP resolv: " + ip
     print "  Sleeping"
     # Print get the grade
