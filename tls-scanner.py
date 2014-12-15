@@ -17,7 +17,17 @@ def analyze (hostname):
     # re-submit to get the IP address
     print "  Re-submit"
     req = requests.get (target + "host={}&".format (hostname) + "clearCache=on&publish=off")
-    ip = json.loads (req.text)[u'endpoints'][-1][u'ipAddress']
+    pi = 0
+    if hostname == "www.seanet.vn":
+        pi = -1
+    while (True):
+        try:
+            ip = json.loads (req.text)[u'endpoints'][pi][u'ipAddress']
+            break
+        except KeyError:
+            print ("Unexpected failure! Sleep and Retry")
+            print req.text
+            sleep (15)
     print "    IP resolv: " + ip
     print "  Sleeping"
     # Print get the grade
@@ -32,11 +42,16 @@ def analyze (hostname):
             grade = json.loads (req.text)[u'grade']
             break
         except KeyError:
-            response = json.loads (req.text)
-            status_message = response['statusMessage']
-            progress = response['progress']
-            status_details = response['statusDetails']
-            print "Status: {0}, details: {1}, progress {2}".format (status_message, status_details, progress)
+            try:
+                response = json.loads (req.text)
+                status_message = response['statusMessage']
+                progress = response['progress']
+                status_details = response['statusDetails']
+                print "Status: {0}, details: {1}, progress {2}".format (status_message, status_details, progress)
+            except KeyError:
+                print req.text, urlReq
+                print "Unexpected failure. Sleep and Rretry"
+                sleep (15)
     return grade, req.text
 
 if __name__ == "__main__":
@@ -50,3 +65,4 @@ if __name__ == "__main__":
             print "Grade: " + data[0]
             with open (domain + ".log", "w") as fout:
                 fout.write (data[1] + "\n")
+
