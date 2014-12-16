@@ -35,8 +35,8 @@ def analyze (hostname):
                 status_details = "None"
                 status_message = "None"
             progress = data[u"endpoints"][0][u"progress"]
-        print "Checking: {host}. Status: {status}. Progress: {progress}".format (host=hostname, status=status, progress=progress)
-        print "  Testing: {details}. Message: {msg}".format (details=status_details, msg=status_message)
+            print "Checking: {host}. Status: {status}. Progress: {progress}".format (host=hostname, status=status, progress=progress)
+            print "  Testing: {details}. Message: {msg}".format (details=status_details, msg=status_message)
         sleep (SLEEP_TIME)
 
 def extract_proto (protocols):
@@ -100,8 +100,9 @@ def process_data (response_text):
     return None
 
 #analyze ("ebank.msb.com.vn")
-#print process_data (analyze ("apib1.anz.com"))
+print process_data (analyze ("ebank.msb.com.vn"))
 
+"""
 if __name__ == "__main__":
     filename = sys.argv[1]
     with open (filename, "r") as fin:
@@ -113,3 +114,4 @@ if __name__ == "__main__":
             result += tmp
     print "############################ Final #####################"
     print result
+"""
