@@ -93,7 +93,7 @@ def process_data (response_text):
             except KeyError:
                 hsts = "None"
             res += "\t HSTS: {0}\n".format (hsts)
-            try:
+            try:jk
                 pin = server[u"pkpResponseHeader"]
             except KeyError:
                 pin = "None"
@@ -102,9 +102,8 @@ def process_data (response_text):
     return None
 
 #analyze ("ebank.msb.com.vn")
-print process_data (analyze ("ebank.msb.com.vn"))
+#print process_data (analyze ("ebank.msb.com.vn"))
 
-"""
 if __name__ == "__main__":
     filename = sys.argv[1]
     with open (filename, "r") as fin:
@@ -116,4 +115,3 @@ if __name__ == "__main__":
             result += tmp
     print "############################ Final #####################"
     print result
-"""
