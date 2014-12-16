@@ -100,12 +100,12 @@ def process_data (response_text):
 
 if __name__ == "__main__":
     filename = sys.argv[1]
-    #log = "scan_20151215.log"
     with open (filename, "r") as fin:
         domains = [line[:-1] for line in fin.readlines()]
+        result = ""
         for domain in domains:
-            print "checking domain {}".format (domain)
-            data = analyze (domain)
-            print "Grade: " + data[0]
-            with open (domain + ".log", "w") as fout:
-                fout.write (data[1] + "\n")
+            tmp = process_data (analyze (domain))
+            print tmp
+            result += process_data (tmp)
+    print "############################ Final #####################"
+    print result
