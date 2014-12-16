@@ -6,67 +6,98 @@ import requests
 from time import sleep
 
 API = "https://api.dev.ssllabs.com/api/fa78d5a4"
+SLEEP_TIME = 15
 
 def analyze (hostname):
    # submit request
-    analyze_url = "{API}/analyze?host={hostname}&clearCache=on&publish=off".format (API=API, hostname=hostname)
-    for pi in xrange (0, 10):
-        req = requests.get (analyze_url)
-        print req.text
-
-analyze ("ebank.msb.com.vn")
-
-"""
-def analyze (hostname):
-    # submit request
-    print "  Submitting request"
-    target = API + "/analyze?"
-    req = requests.get (target + "host={}&".format (hostname) + "clearCache=on&publish=off")
-    # sleeping for resolving request
-    sleep (5)
-    # re-submit to get the IP address
-    print "  Re-submit"
-    req = requests.get (target + "host={}&".format (hostname) + "clearCache=on&publish=off")
-    pi = 0
-    if hostname == "www.seanet.vn":
-        pi = -1
-    counter = 0
-    while (counter <= 10):
-        try:
-            ip = json.loads (req.text)[u'endpoints'][pi][u'ipAddress']
-            break
-        except KeyError:
-            print ("Unexpected failure! Sleep and Retry")
-            print req.text
-            counter += 1
-            sleep (15)
-    print "    IP resolv: " + ip
-    print "  Sleeping"
-    # Print get the grade
-    #print "  Getting the Grade"
-    endpoint = API + "/getEndpointData?"
-    urlReq = endpoint + "host={0}&s={1}&fromCache=off".format (hostname, ip)
+    analyze_url = "{API}/analyze?host={hostname}&publish=off&all=done".format (API=API, hostname=hostname)
+    # initializing the request without cache
+    req = requests.get (analyze_url + "&clearCache=on")
+    print analyze_url + "&clearCache=on"
+    sleep (SLEEP_TIME)
     while (True):
-        sleep (30)
-        req = requests.get (urlReq)
-        try:
-            # try to get the grade
-            grade = json.loads (req.text)[u'grade']
-            break
-        except KeyError:
-            try:
-                response = json.loads (req.text)
-                status_message = response['statusMessage']
-                progress = response['progress']
-                status_details = response['statusDetails']
-                print "Status: {0}, details: {1}, progress {2}".format (status_message, status_details, progress)
+        print analyze_url
+        req = requests.get (analyze_url)
+        #print "raw response: " + req.text
+        data = json.loads (req.text)
+        status = data[u"status"]
+        hostname = data[u"host"]
+        if status == "DNS":
+            status_message = data[u"statusMessage"]
+            status_details = "DNS_RESOLVING"
+        elif status == "READY":
+            return req.text
+        else: # IN_PROGRESS
+            status_details = data[u"endpoints"][0][u"statusDetails"]
+            status_message = data[u"endpoints"][0][u"statusDetailsMessage"]
+            progress = data[u"endpoints"][0][u"progress"]
+        print "Checking: {host}. Status: {status}. Progress: {progress}".format (host=hostname, status=status, progress=progress)
+        print "  Testing: {details}. Message: {msg}".format (details=status_details, msg=status_message)
+        sleep (SLEEP_TIME)
+
+def extract_proto (protocols):
+    s = ""
+    for pro in protocols:
+        s += pro[u"name"] + ": " + pro[u"version"] + "\t"
+    return s
+
+def process_data (response_text):
+    data = json.loads (response_text)
+    # write down raw response
+    hostname = data[u"host"]
+    print "Analyzing: " + hostname + "..."
+    with open(hostname + "-raw.log", "w") as fout:
+        fout.write (response_text)
+    # traverse all endpoints and get the best possible result
+    servers = data[u"endpoints"]
+    for server in servers:
+        # ready report
+        if server[u"statusMessage"] == "Ready":
+            # Extract grade, hasWarnings, key["size"], key["sigAlg"], key["issuerLabel"], 
+            # protocols, supportsRc4
+            # stsResponseHeader, pkpResponseHeader 
+            # vulnBeast, poodleTls, openSslCcs, heartbleed
+            grade = server[u"grade"]
+            # Mismatch Certificates. No check
+            if grade == "M":
+                break
+            ip = server[u"ipAddress"]
+            warnings = server[u"hasWarnings"]
+            details = server[u"details"]
+            key_size = details[u"key"][u"size"]
+            sign_alg = details[u"cert"][u"sigAlg"]
+            issuer = details[u"cert"][u"issuerLabel"]
+            # protocols
+            protocols = extract_proto (details[u"protocols"])
+            rc4_support = details[u"supportsRc4"]
+            # vulnerable
+            beast = details[u"vulnBeast"]
+            poodle = details[u"poodleTls"]
+            ccs = details[u"openSslCcs"]
+            heartbleed = details[u"heartbleed"]
+            res = "Site: {hostname}. IP: {ip}. Grade: {grade}\n".format \
+                (hostname=hostname, ip=ip, grade=grade)
+            res += "\t Protocols: {pro}\n".format (pro=str (protocols))
+            res += "\t Certificates: {issuer}. Key size: {size}. Sign Algorithm: {sign}\n".format \
+                (issuer=issuer, size=key_size, sign=sign_alg)
+            res += "\t Beast: {beast}. PoodleTLS: {poodle}. CCS: {ccs}. Heartbleed: {heartbleed}\n".format \
+                (beast=beast, poodle=poodle, ccs=ccs, heartbleed=heartbleed)
+            try: 
+                hsts = server[u"stsResponseHeader"]
             except KeyError:
-                print req.text, urlReq
-                print "Unexpected failure. Sleep and Rretry"
-                sleep (15)
-    return grade, req.text
-"""
-"""
+                hsts = "None"
+            res += "\t HSTS: {0}\n".format (hsts)
+            try:
+                pin = server[u"pkpResponseHeader"]
+            except KeyError:
+                pin = "None"
+            res += "\t Public key Pinning: {0}\n".format (pin)
+            return res
+    return None
+
+#analyze ("ebank.msb.com.vn")
+#print process_data (analyze ("apib1.anz.com"))
+
 if __name__ == "__main__":
     filename = sys.argv[1]
     #log = "scan_20151215.log"
@@ -78,4 +109,3 @@ if __name__ == "__main__":
             print "Grade: " + data[0]
             with open (domain + ".log", "w") as fout:
                 fout.write (data[1] + "\n")
-"""
