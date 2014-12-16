@@ -35,6 +35,9 @@ def analyze (hostname):
                 status_details = "None"
                 status_message = "None"
             progress = data[u"endpoints"][0][u"progress"]
+            if status_message == "Unexpected failure":
+                req = requests.get (analyze_url + "&clearCache=on")
+                break
             print "Checking: {host}. Status: {status}. Progress: {progress}".format \
                 (host=hostname, status=status, progress=progress)
             print "  Testing: {details}. Message: {msg}.".\
