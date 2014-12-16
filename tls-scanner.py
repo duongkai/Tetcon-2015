@@ -35,8 +35,9 @@ def analyze (hostname):
                 status_details = "None"
                 status_message = "None"
             progress = data[u"endpoints"][0][u"progress"]
-            print "Checking: {host}. Status: {status}".format (host=hostname, status=status, progress=progress)
-            print "  Testing: {details}. Message: {msg}. Progress: {progress}".\
+            print "Checking: {host}. Status: {status}. Progress: {progress}".format \
+                (host=hostname, status=status, progress=progress)
+            print "  Testing: {details}. Message: {msg}.".\
                 format (details=status_details, msg=status_message)
         sleep (SLEEP_TIME)
 
