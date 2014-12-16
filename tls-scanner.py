@@ -93,7 +93,7 @@ def process_data (response_text):
             except KeyError:
                 hsts = "None"
             res += "\t HSTS: {0}\n".format (hsts)
-            try:jk
+            try:
                 pin = server[u"pkpResponseHeader"]
             except KeyError:
                 pin = "None"
