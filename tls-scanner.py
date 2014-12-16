@@ -28,8 +28,12 @@ def analyze (hostname):
         elif status == "READY":
             return req.text
         else: # IN_PROGRESS
-            status_details = data[u"endpoints"][0][u"statusDetails"]
-            status_message = data[u"endpoints"][0][u"statusDetailsMessage"]
+            try:
+                status_details = data[u"endpoints"][0][u"statusDetails"]
+                status_message = data[u"endpoints"][0][u"statusDetailsMessage"]
+            except:
+                status_details = "None"
+                status_message = "None"
             progress = data[u"endpoints"][0][u"progress"]
         print "Checking: {host}. Status: {status}. Progress: {progress}".format (host=hostname, status=status, progress=progress)
         print "  Testing: {details}. Message: {msg}".format (details=status_details, msg=status_message)
@@ -77,7 +81,7 @@ def process_data (response_text):
             heartbleed = details[u"heartbleed"]
             res = "Site: {hostname}. IP: {ip}. Grade: {grade}\n".format \
                 (hostname=hostname, ip=ip, grade=grade)
-            res += "\t Protocols: {pro}\n".format (pro=str (protocols))
+            res += "\t Protocols: {pro}. RC4: {rc4}\n".format (pro=str (protocols), rc4=rc4_support)
             res += "\t Certificates: {issuer}. Key size: {size}. Sign Algorithm: {sign}\n".format \
                 (issuer=issuer, size=key_size, sign=sign_alg)
             res += "\t Beast: {beast}. PoodleTLS: {poodle}. CCS: {ccs}. Heartbleed: {heartbleed}\n".format \
@@ -106,6 +110,6 @@ if __name__ == "__main__":
         for domain in domains:
             tmp = process_data (analyze (domain))
             print tmp
-            result += process_data (tmp)
+            result += tmp
     print "############################ Final #####################"
     print result
