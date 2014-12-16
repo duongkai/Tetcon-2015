@@ -20,13 +20,15 @@ def analyze (hostname):
     pi = 0
     if hostname == "www.seanet.vn":
         pi = -1
-    while (True):
+    counter = 0
+    while (counter <= 10):
         try:
             ip = json.loads (req.text)[u'endpoints'][pi][u'ipAddress']
             break
         except KeyError:
             print ("Unexpected failure! Sleep and Retry")
             print req.text
+            counter += 1
             sleep (15)
     print "    IP resolv: " + ip
     print "  Sleeping"
