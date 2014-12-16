@@ -109,6 +109,7 @@ def process_data (response_text):
 
 if __name__ == "__main__":
     filename = sys.argv[1]
+    report = sys.argv[2]
     with open (filename, "r") as fin:
         domains = [line[:-1] for line in fin.readlines()]
         result = ""
@@ -116,5 +117,7 @@ if __name__ == "__main__":
             tmp = process_data (analyze (domain))
             print tmp
             result += tmp
-    print "############################ Final #####################"
+    print "############################ Final ##################################"
     print result
+    with open (report, "w") as fout:
+        fout.write (result)
