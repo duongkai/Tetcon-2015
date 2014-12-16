@@ -8,6 +8,16 @@ from time import sleep
 API = "https://api.dev.ssllabs.com/api/fa78d5a4"
 
 def analyze (hostname):
+   # submit request
+    analyze_url = "{API}/analyze?host={hostname}&clearCache=on&publish=off".format (API=API, hostname=hostname)
+    for pi in xrange (0, 10):
+        req = requests.get (analyze_url)
+        print req.text
+
+analyze ("ebank.msb.com.vn")
+
+"""
+def analyze (hostname):
     # submit request
     print "  Submitting request"
     target = API + "/analyze?"
@@ -55,7 +65,8 @@ def analyze (hostname):
                 print "Unexpected failure. Sleep and Rretry"
                 sleep (15)
     return grade, req.text
-
+"""
+"""
 if __name__ == "__main__":
     filename = sys.argv[1]
     #log = "scan_20151215.log"
@@ -67,4 +78,4 @@ if __name__ == "__main__":
             print "Grade: " + data[0]
             with open (domain + ".log", "w") as fout:
                 fout.write (data[1] + "\n")
-
+"""
