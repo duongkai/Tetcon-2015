@@ -1,0 +1,48 @@
+Site: www.nganluong.vn. IP: 123.30.51.48. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.vnmart.vn. IP: 210.245.12.218. Grade: F
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.payoo.vn. IP: 118.69.206.50. Grade: B
+	 Protocols: SSL: 3.0	TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: Go Daddy Secure Certificate Authority - G2. Key size: 4096. Sign Algorithm: SHA256withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: onepay.vn. IP: 202.9.84.88. Grade: B
+	 Protocols: SSL: 3.0	TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.baokim.vn. IP: 210.245.83.94. Grade: A-
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: 123pay.vn. IP: 49.213.68.68. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: DigiCert High Assurance CA-3. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: senpay.vn. IP: 111.65.244.129. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GeoTrust Extended Validation SSL CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: payment.smartlink.com.vn. IP: 123.30.24.123. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None

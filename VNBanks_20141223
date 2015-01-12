@@ -1,0 +1,240 @@
+Site: apib1.anz.com. IP: 202.2.59.18. Grade: F
+	 Protocols: SSL: 3.0	TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 International Server CA - G3. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.citibank.com.vn. IP: 192.193.162.168. Grade: C
+	 Protocols: SSL: 3.0	TLS: 1.0	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.hsbc.com.vn. IP: 203.112.92.118. Grade: B
+	 Protocols: SSL: 3.0	TLS: 1.0	. RC4: True
+	 Certificates: Symantec Class 3 EV SSL SGC CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: vn.online.standardchartered.com. IP: 172.226.80.133. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: Cybertrust Public SureServer SV CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.acbonline.com.vn. IP: 202.59.252.14. Grade: F
+	 Protocols: SSL: 3.0	TLS: 1.0	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebank.tpb.vn. IP: 103.232.56.31. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.dongabank.com.vn. IP: 203.77.178.26. Grade: A
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.seanet.vn. IP: 118.69.201.208. Grade: F
+	 Protocols: SSL: 2.0	SSL: 3.0	TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Public Primary Certification Authority - G5. Key size: 1024. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ib.oceanbank.vn. IP: 103.31.120.51. Grade: F
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.abbank.vn. IP: 202.74.58.11. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ib.gpbank.com.vn. IP: 123.30.1.164. Grade: F
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.vietcapitalbank.com.vn. IP: 115.165.160.218. Grade: A
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebank.msb.com.vn. IP: 123.30.17.133. Grade: A-
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 International Server CA - G3. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ib.techcombank.com.vn. IP: 103.4.128.12. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebank.kienlongbank.com. IP: 103.5.30.25. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.namabank.com.vn. IP: 101.99.41.140. Grade: A-
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.ncb-bank.vn. IP: 203.113.172.197. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 2. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: online.vpbank.com.vn. IP: 202.74.56.50. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: Symantec Class 3 EV SSL SGC CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.hdbank.vn. IP: 222.255.77.238. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.southernbank.com.vn. IP: 125.234.253.135. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: Symantec Class 3 EV SSL CA - G3. Key size: 2048. Sign Algorithm: SHA256withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.ocb.com.vn. IP: 103.28.136.2. Grade: F
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.mbbank.com.vn. IP: 103.12.104.10. Grade: F
+	 Protocols: SSL: 3.0	TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: Symantec Class 3 EV SSL SGC CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ibanking.pvcombank.com.vn. IP: 103.10.88.10. Grade: F
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ib.vib.com.vn. IP: 103.10.214.8. Grade: F
+	 Protocols: SSL: 2.0	TLS: 1.0	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.scb.com.vn. IP: 14.161.30.122. Grade: F
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ibanking.saigonbank.com.vn. IP: 220.231.92.230. Grade: A
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ibanking.shb.com.vn. IP: 122.102.112.31. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.isacombank.com.vn. IP: 222.255.82.117. Grade: F
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.vietabank.com.vn. IP: 103.243.216.7. Grade: F
+	 Protocols: SSL: 3.0	TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 2. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebank.baovietbank.vn. IP: 101.99.22.68. Grade: F
+	 Protocols: SSL: 2.0	TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: online.vietbank.com.vn. IP: 118.69.217.179. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.2	. RC4: True
+	 Certificates: Symantec Class 3 EV SSL SGC CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: home.pgbank.com.vn. IP: 118.70.240.147. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 2. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.eximbank.vn. IP: 202.4.168.161. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 2. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.lienvietpostbank.com.vn. IP: 202.9.80.54. Grade: F
+	 Protocols: SSL: 2.0	SSL: 3.0	TLS: 1.0	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 2. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.vietcombank.com.vn. IP: 103.11.172.38. Grade: A
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: Symantec Class 3 EV SSL CA - G3. Key size: 2048. Sign Algorithm: SHA256withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.mdb.com.vn. IP: 125.234.251.236. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: GeoTrust EV SSL CA - G4. Key size: 2048. Sign Algorithm: SHA256withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.vncb.vn. IP: 115.79.207.220. Grade: B
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ebanking.vietinbank.vn. IP: 203.189.28.25. Grade: B
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: False. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: www.bidv.vn. IP: 203.201.59.117. Grade: F
+	 Protocols: TLS: 1.0	. RC4: True
+	 Certificates: GlobalSign Extended Validation CA - G2. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
+Site: ibank.agribank.com.vn. IP: 175.106.1.38. Grade: A-
+	 Protocols: TLS: 1.0	TLS: 1.1	TLS: 1.2	. RC4: False
+	 Certificates: VeriSign Class 3 Extended Validation SSL SGC CA. Key size: 2048. Sign Algorithm: SHA1withRSA
+	 Beast: True. PoodleTLS: 1. CCS: 1. Heartbleed: False
+	 HSTS: None
+	 Public key Pinning: None
